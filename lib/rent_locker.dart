@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:inertia_flutter/defaultAppBar.dart';
-import 'package:inertia_flutter/login.dart';
-import 'package:inertia_flutter/success_locker.dart';
 
 void main() {
   runApp(const RentLocker());
@@ -13,9 +11,9 @@ class RentLocker extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: DefaultAppBar(textTitle: 'Alugue um locker'),
+    return
+      Scaffold(
+        appBar: const DefaultAppBar(textTitle: 'Alugue um locker'),
         backgroundColor: const Color.fromRGBO(171, 168, 163, 60),
         // Cor de fundo da tela
         body: Padding(
@@ -32,10 +30,8 @@ class RentLocker extends StatelessWidget {
                     color: Colors.white),
               ),
               const SizedBox(height: 16),
-              // Espaçamento entre o texto e os quadrados
               buildBlackSquare('Av. Sapopemba, 415 - Vila Reg. Feijó', context),
               const SizedBox(height: 16),
-              // Espaçamento entre os quadrados
               buildBlackSquare('R. Avaí, 358 - Mooca', context),
               const SizedBox(height: 16),
               buildBlackSquare('R. Martim Burchard, 112 - Brás', context),
@@ -46,8 +42,8 @@ class RentLocker extends StatelessWidget {
             ],
           ),
         ),
-      ),
-    );
+      );
+
   }
 
   Widget buildBlackSquare(String text, BuildContext context) {
@@ -61,11 +57,9 @@ class RentLocker extends StatelessWidget {
           ),
         ),
         onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => const Scaffold(body: SuccessLocker()),
-            ),
+          Navigator.pushNamed(
+              context,'/payment',
+            arguments: text
           );
         },
         child: Container(

@@ -65,6 +65,7 @@ flutter:
      - assets/login_background.png
      - assets/storage_icon.svg
      -  assets/check_icon.svg
+     - assets/mastercard_icon.svg
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

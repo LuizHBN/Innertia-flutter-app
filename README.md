@@ -2,6 +2,9 @@
 
 Aplicativo de locker para FIAP
 
+## Instruções para execução
+Execute MyApp() na classe main.dart
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.

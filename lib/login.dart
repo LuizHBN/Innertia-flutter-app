@@ -1,6 +1,5 @@
 import 'dart:ui';
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:inertia_flutter/rent_locker.dart';
 
@@ -9,7 +8,7 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Scaffold(body:  Container(
       decoration: const BoxDecoration(
         image: DecorationImage(
           image: AssetImage("assets/login_background.png"),
@@ -42,7 +41,7 @@ class LoginPage extends StatelessWidget {
                   decoration: BoxDecoration(
                     color: Colors.black.withOpacity(0.5), // Fundo com opacidade
                     borderRadius:
-                        BorderRadius.circular(15.0), // Bordas arredondadas
+                    BorderRadius.circular(15.0), // Bordas arredondadas
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -95,11 +94,8 @@ class LoginPage extends StatelessWidget {
                         width: double.infinity,
                         child: ElevatedButton(
                             onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => const RentLocker(),
-                                ),
+                              Navigator.pushNamed(
+                                context,'/rent_locker'
                               );
                             },
                             style: ElevatedButton.styleFrom(
@@ -113,7 +109,7 @@ class LoginPage extends StatelessWidget {
                             child: const Text(
                               'Entrar',
                               style:
-                                  TextStyle(color: Colors.black, fontSize: 25),
+                              TextStyle(color: Colors.black, fontSize: 25),
                             )),
                       ),
                       const SizedBox(height: 16),
@@ -130,6 +126,7 @@ class LoginPage extends StatelessWidget {
           ],
         ),
       ),
-    );
+    ));
+
   }
 }

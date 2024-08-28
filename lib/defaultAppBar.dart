@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:inertia_flutter/login.dart';
 
 class DefaultAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String textTitle;
@@ -12,11 +11,9 @@ class DefaultAppBar extends StatelessWidget implements PreferredSizeWidget {
       leading: IconButton(
         icon: const Icon(Icons.arrow_back, color: Colors.white),
         onPressed: () {
-          Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => const Scaffold(body: LoginPage()),
-              ));
+          Navigator.pop(
+              context
+          );
         },
       ),
       title: Text(

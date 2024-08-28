@@ -13,8 +13,7 @@ class SuccessLocker extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        home: Scaffold(
+    return  Scaffold(
             backgroundColor: const Color.fromRGBO(171, 168, 163, 60),
             // Cor de fundo da tela
             body: Padding(
@@ -43,11 +42,10 @@ class SuccessLocker extends StatelessWidget {
                     width: double.infinity,
                     child: ElevatedButton(
                         onPressed: () {
-                          Navigator.push(
+                          Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => const Scaffold(body: RentLocker()),
-                            ),
+                              builder: (context) => const  RentLocker()),
                           );
                         },
                         style: ElevatedButton.styleFrom(
@@ -65,6 +63,6 @@ class SuccessLocker extends StatelessWidget {
                   ),
                 ],
               ),
-            )));
+            ));
   }
 }
